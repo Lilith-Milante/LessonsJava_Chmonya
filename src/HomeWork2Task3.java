@@ -6,7 +6,7 @@ import java.io.IOException;
 // Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл
 
 public class HomeWork2Task3 {
-    public static String main(String[] args) {
+    public static void main(String[] args) {
 
         Random random = new Random();
         int[] arrayToBeSorted = random.ints(100, 10, 100).toArray();
@@ -18,7 +18,7 @@ public class HomeWork2Task3 {
 
         try {
 
-            fileHandler = new FileHandler("D:\Курс Разработчик\II Четверть\02 Java\Lesson2\Lesson2\src\logSort.txt");
+            fileHandler = new FileHandler("D:/Курс Разработчик/II Четверть/02 Java/Lesson2/Lesson2/src/logSort.txt");
             logSort.addHandler(fileHandler);
             SimpleFormatter formatter = new SimpleFormatter();
             fileHandler.setFormatter(formatter);
@@ -26,22 +26,21 @@ public class HomeWork2Task3 {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public static String sortArray(int[] array, logger logSort){
 
-        public static String sortArray(int[] array, logger logSort) {
-
-            String arrayToString = null;
-            for (int i = 0; i < array.length - 1; i++) {
-                for (int j = array.length - 1; j > i; j--) {
-                    if (array[j - 1] > array[j]) {
-                        int temp = array[j - 1];
-                        array[j - 1] = array[j];
-                        array[j] = temp;
-                        arrayToString = Arrays.toString(array);
-                        logSort.info(arrayToString);
-                    }
+        String arrayToString = null;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = array.length - 1; j > i; j--) {
+                if (array[j - 1] > array[j]) {
+                    int temp = array[j - 1];
+                    array[j - 1] = array[j];
+                    array[j] = temp;
+                    arrayToString = Arrays.toString(array);
+                    logSort.info(arrayToString);
                 }
             }
-            return arrayToString;
         }
+        return arrayToString;
     }
 }

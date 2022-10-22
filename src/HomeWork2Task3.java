@@ -4,25 +4,16 @@ import java.util.Arrays;
 import java.io.IOException;
 
 // Реализуйте алгоритм сортировки пузырьком числового массива, результат после каждой итерации запишите в лог-файл
-// Напишите метод, который определит тип (расширение) файлов из текущей папки и выведет в консоль результат вида
-/* 1 Расширение файла: txt
 
-2 Расширение файла: pdf
-
-3 Расширение файла:
-
-4 Расширение файла: jpg */
-// К калькулятору из предыдущего дз добавить логирование.
-
-public class Homework_2 {
-
+public class HomeWork2Task3 {
     public static String main(String[] args) {
+
         Random random = new Random();
         int[] arrayToBeSorted = random.ints(100, 10, 100).toArray();
 
-        //logSort.info(arrayToBeSorted.toString());
-        //logSort.info(sortArray(arrayToBeSorted, logSort).toString());
         Logger logSort = Logger.getAnonymousLogger();
+        logSort.info(sortArray(arrayToBeSorted));
+
         FileHandler fileHandler;
 
         try {
@@ -36,7 +27,7 @@ public class Homework_2 {
             e.printStackTrace();
         }
 
-        private static String sortArray ( int[] array){
+        public static String sortArray(int[] array, logger logSort) {
 
             String arrayToString = null;
             for (int i = 0; i < array.length - 1; i++) {
@@ -46,9 +37,11 @@ public class Homework_2 {
                         array[j - 1] = array[j];
                         array[j] = temp;
                         arrayToString = Arrays.toString(array);
+                        logSort.info(arrayToString);
                     }
                 }
             }
             return arrayToString;
         }
     }
+}

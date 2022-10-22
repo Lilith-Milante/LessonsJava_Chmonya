@@ -9,10 +9,10 @@ public class HomeWork2Task3 {
     public static void main(String[] args) {
 
         Random random = new Random();
-        int[] arrayToBeSorted = random.ints(100, 10, 100).toArray();
+        int[] arrayToBeSorted = random.ints(50, 10, 100).toArray();
 
         Logger logSort = Logger.getAnonymousLogger();
-        logSort.info(sortArray(arrayToBeSorted));
+        logSort.info(sortArray(arrayToBeSorted, logSort));
 
         FileHandler fileHandler;
 
@@ -27,7 +27,7 @@ public class HomeWork2Task3 {
             e.printStackTrace();
         }
     }
-    public static String sortArray(int[] array, logger logSort){
+    public static String sortArray(int[] array, Logger logSort){
 
         String arrayToString = null;
         for (int i = 0; i < array.length - 1; i++) {

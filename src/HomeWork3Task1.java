@@ -3,6 +3,7 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 
 //1. Реализовать алгоритм сортировки слиянием
+
 public class HomeWork3Task1 {
     public static void main(String[] args) {
         int[] toSort = new int[] {5, 4, 0, 9, 3, 2, 8};

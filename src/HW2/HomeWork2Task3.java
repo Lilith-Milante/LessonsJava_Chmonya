@@ -1,3 +1,5 @@
+package HW2;
+
 import java.util.logging.*;
 import java.util.Random;
 import java.util.Arrays;

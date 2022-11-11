@@ -1,6 +1,6 @@
 package HW4;
 
-//2. Реализуйте очередь с помощью LinkedList со следующими методами:enqueue() - помещает элемент в конец очереди,
+// 2. Реализуйте очередь с помощью LinkedList со следующими методами:enqueue() - помещает элемент в конец очереди,
 //dequeue() - возвращает первый элемент из очереди и удаляет его, first() - возвращает первый элемент из очереди, не удаляя.
 
 import java.util.LinkedList;
@@ -15,6 +15,9 @@ public class HomeWork4Task2 {
 
         Logger log3 = Logger.getAnonymousLogger();
         log3.info(String.valueOf(enqueue(6)));
+
+        Logger log2 = Logger.getAnonymousLogger();
+        log2.info(String.valueOf(enqueue(7)));
 
         Logger log4 = Logger.getAnonymousLogger();
         log4.info(String.valueOf(dequeue()));

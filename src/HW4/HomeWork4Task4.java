@@ -11,30 +11,30 @@ public class HomeWork4Task4 {
         String infix = "x^y/(5*z)+10";
 
         Logger log6 = Logger.getAnonymousLogger();
-        log6.info(String.valueOf("Original expression " + infix));
+        log6.info(String.valueOf("Original expression: " + infix));
 
         Logger log7 = Logger.getAnonymousLogger();
-        log7.info(String.valueOf("Converted expression " + infixToPostfix(infix)));
+        log7.info(String.valueOf("Converted expression: " + infixToPostfix(infix)));
 
     }
 
     public static int priority(char c) { // проверка приоритета операции
 
         if (c == '*' || c == '/') {
-            return 3;
+            return 1;
         } if (c == '+' ||  c == '-') {
-            return 4;
+            return 2;
         } if (c == '&') {
-            return 8;
+            return 3;
         } if (c == '^') {
-            return 9;
+            return 4;
         } if (c == '|') {
-            return 10;
+            return 5;
         }
         return c;
     }
 
-    public static boolean isOperand(char c) { // проверяем, операнд ли наш символ
+    public static boolean isOperand(char c) { // для проверки, операнд ли наш символ
         return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
     }
     public static String infixToPostfix(String infix) {

@@ -2,14 +2,13 @@ package HW4;
 
 // 4. Реализовать алгоритм перевода из инфиксной записи в постфиксную для арифметического выражения.
 
-import java.util.Queue;
 import java.util.Stack;
 import java.util.logging.Logger;
 
 public class HomeWork4Task4 {
     public static void main(String[] args) {
 
-        String infix = "x ^ y / (5 * z) + 10";
+        String infix = "x^y/(5*z)+10";
 
         Logger log6 = Logger.getAnonymousLogger();
         log6.info(String.valueOf("Original expression " + infix));

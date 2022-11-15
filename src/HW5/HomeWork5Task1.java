@@ -5,6 +5,7 @@ package HW5;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 public class HomeWork5Task1 {
     public static void main(String[] args) {
@@ -32,6 +33,16 @@ public class HomeWork5Task1 {
         Logger log2 = Logger.getAnonymousLogger();
         log2.info(String.valueOf(first));
         log2.info(String.valueOf(second));
+
+        // как на семинаре:
+
+        log2.info(String.valueOf(phoneBook.keySet().stream().filter(n -> phoneBook.get(n).equals("Egor")).collect(Collectors.toList())));
+
+        for (Integer key : phoneBook.keySet()) {
+            if (phoneBook.get(key).equals("Ivanov")) {
+                log2.info(String.valueOf(key) + " " + phoneBook.get(key));
+            }
+        }
 
         return phoneBook;
     }

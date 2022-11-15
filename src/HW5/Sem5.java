@@ -152,7 +152,6 @@ public class Sem5 {
         dict.put('M', 1000);
 
         char[] romanNumber = roman.toCharArray();
-        //Integer[] arabicNumber = new Integer[romanNumber.length];
         int number = 0;
         for (int i = 0; i < romanNumber.length - 1; i++) {
             if (dict.get(romanNumber[i]) >= dict.get(romanNumber[i + 1])) {

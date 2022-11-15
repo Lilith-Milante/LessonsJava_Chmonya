@@ -22,7 +22,6 @@ import java.util.Stack;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.List;
-import java.util.Dictionary;
 
 public class Sem5 {
     public static void main(String[] args) {
@@ -122,13 +121,12 @@ public class Sem5 {
         closeContainer.add('>');
 
         for (char item : charExp) {
-            if (openContainer.contains(item)) { // если символ есть в первом листе
-                stack.push(item); // добавляем элемент в стэк
-            } else if (closeContainer.contains(item)) { // если есть во втором листе
-                if(stack.isEmpty() || openContainer.get(closeContainer.indexOf(item)).equals(stack.peek())); {
+            if (openContainer.contains(item)) {
+                stack.push(item);
+            } else if (closeContainer.contains(item)) {
+                if (stack.isEmpty() || !openContainer.get(closeContainer.indexOf(item)).equals(stack.peek())) {
                     return false;
-                }
-                else { // разобраться с вот этим
+                } else {
                     stack.pop();
                 }
             }

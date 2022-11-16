@@ -10,7 +10,6 @@ public class Cat {
     public Cat(String nameCat, CatOwner catOwner) {
         this.nameCat = nameCat;
         this.catOwner = catOwner;
-
     }
 
     public int getMonthBirth() {
@@ -64,5 +63,17 @@ public class Cat {
 
     public boolean isMail() {
         return this.catMale == 'M';
+    }
+
+    public boolean equals(Object someCatObj) { // переобпределяем метод equals
+        Cat someCat = (Cat) someCatObj;// перевели как обджект наш тип Cat
+        return (this.catOwner.name.equals(someCat.catOwner.name)) &&
+                (this.catMale == someCat.catMale) &&
+                (this.nameCat.equals(someCat.nameCat)) &&
+                (this.monthBirth == someCat.monthBirth) &&
+                (this.yearBirth == someCat.yearBirth);
+    }
+    public int hashCode() { // переопределение хэш-кода
+        return (monthBirth + yearBirth) * 27;
     }
 }

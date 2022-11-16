@@ -52,6 +52,7 @@ public class HomeWork5Task2 {
             logger3.info(String.valueOf(key + ": " + countss.get(key))); // имена и кол-во повторений
 
         }
+
         TreeMap<Integer, List<String>> countsSort = new TreeMap<>(); // метод для сортировки
         for (String it : countss.keySet()) {
             if (countsSort.containsKey(countss.get(it))) {
@@ -75,4 +76,10 @@ public class HomeWork5Task2 {
             count.add(repit);
             repit = 0;
         }
-        return count;*/
+        return count;
+
+Integer[] arr = countss.values().toArray(new Integer[0]);
+        Arrays.sort(arr, Collections.reverseOrder());
+        for(int values : arr) {
+            System.out.println(values + ",");
+ */

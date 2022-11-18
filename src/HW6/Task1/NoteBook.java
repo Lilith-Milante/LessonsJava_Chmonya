@@ -7,8 +7,11 @@ package HW6.Task1;
 2 - Объем ЖД
 3 - Операционная система
 4 - Цвет …
-3.1. Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
-4. Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям. */
+Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
+Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям. */
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class NoteBook {
 
@@ -17,31 +20,34 @@ public class NoteBook {
     String operationSystem;
     String colour;
 
-    public static void main(String[] args) {
+    public void setRandomAccessMemory(String randomAccessMemory) {
+        this.randomAccessMemory = randomAccessMemory;
+    }
 
-        NoteBook dell = new NoteBook();
-        dell.randomAccessMemory = "16 GB";
-        dell.hardWareCapacity = "512 GB";
-        dell.operationSystem = "Windows";
-        dell.colour = "Black";
+    public void setHardWareCapacity(String hardWareCapacity) {
+        this.hardWareCapacity = hardWareCapacity;
+    }
 
-        NoteBook asus = new NoteBook();
-        dell.randomAccessMemory = "16 GB";
-        dell.hardWareCapacity = "128 GB";
-        dell.operationSystem = "Windows";
-        dell.colour = "Grey";
+    public void setOperationSystem(String operationSystem) {
+        this.operationSystem = operationSystem;
+    }
 
-        NoteBook acer = new NoteBook();
-        dell.randomAccessMemory = "8 GB";
-        dell.hardWareCapacity = "512 GB";
-        dell.operationSystem = "Windows";
-        dell.colour = "White";
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
 
-        NoteBook huawei = new NoteBook();
-        dell.randomAccessMemory = "18 GB";
-        dell.hardWareCapacity = "128 GB";
-        dell.operationSystem = "Linux";
-        dell.colour = "Black";
+    public static void criterions() {
+        System.out.println("Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour");
+    }
 
+    public Map<Integer, String> getNoteMap() { // для хранения критериев
+        Map<Integer, String> noteMap = new HashMap<>();
+
+        noteMap.put(1, "randomAccessMemory");
+        noteMap.put(2, "hardWareCapacity");
+        noteMap.put(3, "operationSystem");
+        noteMap.put(4, "colour");
+
+        return noteMap;
     }
 }

@@ -82,8 +82,6 @@ public class Sem6 {
         cat1.setCatMale('M');
         cat1.setMonthBirth(2);
         cat1.setYearBirth(2021);
-        //System.out.println(cat1);
-        //System.out.println(cat1.isMail());
 
         Cat cat2 = new Cat("Bars", new CatOwner("Ivan Petrov"));
         cat2.setCatMale('M');

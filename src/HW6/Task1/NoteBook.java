@@ -22,12 +22,12 @@ public class NoteBook {
     private static Map<Integer, Object> noteMap = new HashMap<>(); // коллекция критериев
 
     public void setRandomAccessMemory(int randomAccessMemory) {
-        this.randomAccessMemory = randomAccessMemory;
+        NoteBook.randomAccessMemory = randomAccessMemory;
         noteMap.put(1, randomAccessMemory);
     }
 
     public void setHardWareCapacity(int hardWareCapacity) {
-        this.hardWareCapacity = hardWareCapacity;
+        NoteBook.hardWareCapacity = hardWareCapacity;
         noteMap.put(2, hardWareCapacity);
     }
 
@@ -42,43 +42,43 @@ public class NoteBook {
     }
 
     public static String getRequest() {
-        System.out.println("Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour ");
+        /*System.out.println("Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour ");
         Scanner sc = new Scanner(System.in);
-        int number = sc.nextInt();
+        int number = sc.nextInt();*/
         return "Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour";
     }
 
-    public static void filter(int number, Object min) { // коллекция для фильтра
+    public static void filter(int number, Object min) {
         filterMap.put(number, min);
     }
 
-    public static Map<Integer, Object> getNoteBooks(ArrayList<NoteBook> laptops) {
-
-        /*Map<Integer, Object> noteMap = new HashMap<>();
-
-        noteMap.put(1, randomAccessMemory);
-        noteMap.put(2, hardWareCapacity);
-        noteMap.put(3, "operationSystem");
-        noteMap.put(4, "colour");*/
+    public static Map<Integer, Object> getNoteBooks(ArrayList<NoteBook> noteBooksSet) { // ArrayList<NoteBook> laptops
 
         Map<Integer, Object> results = new HashMap<>();
         boolean t;
 
-        for (NoteBook specifiaction : laptops) {
+        for (NoteBook specification: noteBooksSet) {
             for (int i = 0; i < noteMap.size(); i++) {
                 t = true;
                 for (Object j : filterMap.keySet()) {
                     if (noteMap.get(j) instanceof Integer) {
-                        if ((Integer) specifiaction.noteMap.getOrDefault(j, 0) < (Integer) filterMap.getOrDefault(j, 0)) {
+                        if ((Integer) noteMap.getOrDefault(j, 0) < (Integer) filterMap.getOrDefault(j, 0)) {
                             t = false;
                         }
                     }
                 }
                 if (t) {
-                    results.put(1, specifiaction.noteMap);
+                    results.put(1, noteMap);
                 }
             }
         }
         return results;
     }
 }
+
+/*Map<Integer, Object> noteMap = new HashMap<>();
+
+        noteMap.put(1, randomAccessMemory);
+        noteMap.put(2, hardWareCapacity);
+        noteMap.put(3, "operationSystem");
+        noteMap.put(4, "colour");*/

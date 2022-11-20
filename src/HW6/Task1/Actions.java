@@ -27,12 +27,12 @@ public class Actions {
         acer.setColour("White");
 
         NoteBook huawei = new NoteBook();
-        huawei.setRandomAccessMemory(18);
+        huawei.setRandomAccessMemory(16);
         huawei.setHardWareCapacity(128);
         huawei.setOperationSystem("Linux");
         huawei.setColour("Black");
 
-        Set<NoteBook> noteBooksSet = new HashSet<>();
+        ArrayList<NoteBook> noteBooksSet = new ArrayList<>(); // к множеству Set не может применить метод ниже
 
         noteBooksSet.add(dell);
         noteBooksSet.add(asus);
@@ -42,9 +42,10 @@ public class Actions {
         Logger logNote = Logger.getAnonymousLogger(); // печать критериев
         logNote.info(NoteBook.getRequest());
 
-        var answer = NoteBook.getNoteBooks((ArrayList<NoteBook>) noteBooksSet); // результат
-        logNote.info(String.valueOf(answer));
+        NoteBook.filter(1, 16);
+        NoteBook.filter(2, 512);
 
-        NoteBook.filter(1, 8);
+        var answer = NoteBook.getNoteBooks(noteBooksSet); // результат
+        logNote.info(String.valueOf(answer));
     }
 }

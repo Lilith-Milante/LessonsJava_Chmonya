@@ -10,11 +10,14 @@ package HW6.Task1;
 Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
 Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям. */
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 public class NoteBook {
 
+    private static Properties filterMap;
     String randomAccessMemory;
     String hardWareCapacity;
     String operationSystem;
@@ -61,23 +64,23 @@ public class NoteBook {
         return noteMap;
     }
 
-    public static Map<String, Map<Integer, Object>> getNoteBooks() {
+    public static Map<String, Map<Integer, Object>> getNoteBooks(ArrayList<NoteBook> laptops) {
 
         Map<String, Map<Integer, Object>> results = new HashMap<>();
         boolean t;
 
-        for (NoteBook specifiaction : noteboos) {
-            for (int i = 0; i < specifiaction.specs.size(); i++) {
+        for (NoteBook specifiaction : laptops) {
+            for (int i = 0; i < specifiaction.getNoteMap().size(); i++) {
                 t = true;
                 for (int j : filterMap.keySet()) {
-                    if (specifiaction.specs.get(j) instanceof Integer) {
-                        if ((Integer) specifiaction.specs.getOrDefault(j, 0) < (Integer) filterMap.getOrDefault(j, 0)) {
+                    if (specifiaction.getNoteMap().get(j) instanceof Integer) {
+                        if ((Integer) specifiaction.getNoteMap().getOrDefault(j, 0) < (Integer) filterMap.getOrDefault(j, 0)) {
                             t = false;
                         }
                     }
                 }
                 if (t) {
-                    results.put(specifiaction.id, specifiaction.specs);
+                    results.put(specifiaction.getNoteMap());
                 }
             }
         }

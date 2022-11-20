@@ -20,6 +20,7 @@ public class NoteBook {
     String operationSystem;
     String colour;
 
+
     public void setRandomAccessMemory(String randomAccessMemory) {
         this.randomAccessMemory = randomAccessMemory;
     }
@@ -36,11 +37,20 @@ public class NoteBook {
         this.colour = colour;
     }
 
-    public static void criterions() {
-        System.out.println("Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour");
+    public static String getRequest() {
+        /*System.out.println("Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour ");
+        Scanner sc = new Scanner(System.in); // String username = scanner.nextLine(); если бы строка
+        int number = sc.nextInt();*/
+        return "Please, write your minimum system requirements such as: 1 - randomAccessMemory; 2 - hardWareCapacity; 3 - operationSystem; 4 - colour";
     }
 
-    public Map<Integer, String> getNoteMap() { // для хранения критериев
+    public  static void filter(int criteria, Object min) { // коллекция для фильтра
+        Map<Integer, Object> filterMap = new HashMap<>();
+        filterMap.put(criteria, min);
+
+    }
+
+    public Map<Integer, String> getNoteMap() { // коллекция критериев
         Map<Integer, String> noteMap = new HashMap<>();
 
         noteMap.put(1, "randomAccessMemory");
@@ -49,5 +59,27 @@ public class NoteBook {
         noteMap.put(4, "colour");
 
         return noteMap;
+    }
+
+    public static Map<String, Map<Integer, Object>> getNoteBooks() {
+
+        Map<String, Map<Integer, Object>> results = new HashMap<>();
+        boolean t;
+
+        for (NoteBook specifiaction : noteboos) {
+            for (int i = 0; i < specifiaction.specs.size(); i++) {
+                t = true;
+                for (int j : filterMap.keySet()) {
+                    if (specifiaction.specs.get(j) instanceof Integer) {
+                        if ((Integer) specifiaction.specs.getOrDefault(j, 0) < (Integer) filterMap.getOrDefault(j, 0)) {
+                            t = false;
+                        }
+                    }
+                }
+                if (t) {
+                    results.put(specifiaction.id, specifiaction.specs);
+                }
+            }
+        }
     }
 }

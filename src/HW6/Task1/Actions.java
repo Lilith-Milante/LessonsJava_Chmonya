@@ -38,7 +38,7 @@ public class Actions {
         noteBooksSet.add(acer);
         noteBooksSet.add(huawei);
 
-        Logger logNote = Logger.getAnonymousLogger();
-        logNote.info(String.valueOf(criterions));
+        Logger logNote = Logger.getAnonymousLogger(); // печать критериев
+        logNote.info(NoteBook.getRequest());
     }
 }

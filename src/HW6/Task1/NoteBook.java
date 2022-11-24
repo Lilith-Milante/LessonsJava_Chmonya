@@ -75,10 +75,3 @@ public class NoteBook {
         return results;
     }
 }
-
-/*Map<Integer, Object> noteMap = new HashMap<>();
-
-        noteMap.put(1, randomAccessMemory);
-        noteMap.put(2, hardWareCapacity);
-        noteMap.put(3, "operationSystem");
-        noteMap.put(4, "colour");*/

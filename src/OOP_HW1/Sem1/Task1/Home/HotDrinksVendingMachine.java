@@ -7,10 +7,11 @@ public class HotDrinksVendingMachine implements VendingMachine { // исполь
     private ArrayList<HotDrinkHeir> allDrinks = new ArrayList<>(); // HotDrinkHeir потому что оттуда берутся объекты, наследник, потому что ещё температура
 
 
-    public void addProduct(HotDrinkHeir item) {
-        this.allDrinks.add(item);
+    public HotDrinksVendingMachine(HotDrink[] drinks) {
+        for (HotDrink HotDrinkH : drinks) {
+            this.drinks.add(HotDrinkH);
+        }
     }
-
 
     public HotDrinkHeir getProduct(String name, double volume, int temperature) {
 

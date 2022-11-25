@@ -23,4 +23,5 @@ public class Main {
 
         Logger logger1 = Logger.getAnonymousLogger();
         logger1.info(String.valueOf(cup1.getProduct("Black tea", 0.4, 80)));
+    }
 }

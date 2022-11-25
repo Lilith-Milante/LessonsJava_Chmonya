@@ -21,6 +21,6 @@ public class HotDrinksVendingMachine implements VendingMachine { // исполь
                 return allDrinks.get(i);
             }
         }
-        return new HotDrinkHeir("Absence! Nothing to count as price and other ", + 0, + 0, + 0);
+        return new HotDrinkHeir("Absence! Nothing to count as price and other ", + 0, + 0.1, + 0);
     }
 }

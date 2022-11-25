@@ -13,9 +13,9 @@ public class Main {
         HotDrinkHeir drink3 = new HotDrinkHeir("Coffee Latte", 80, 0.3, 85);
         HotDrinkHeir drink4 = new HotDrinkHeir("Kissel", 70, 0.5, 80);
 
-        HotDrink[] tea = {drink1, drink2};
-        HotDrink[] coffee = {drink3};
-        HotDrink[] kissel = {drink4};
+        HotDrinkHeir[] tea = {drink1, drink2};
+        HotDrinkHeir[] coffee = {drink3};
+        HotDrinkHeir[] kissel = {drink4};
 
         HotDrinksVendingMachine cup1 = new HotDrinksVendingMachine(tea);
         HotDrinksVendingMachine cup2 = new HotDrinksVendingMachine(coffee);

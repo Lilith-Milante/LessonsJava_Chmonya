@@ -9,9 +9,9 @@ public class HotDrink {
 
     protected String name;
     protected double price;
-    protected double volume;
+    protected Double volume;
 
-    public HotDrink(String name, double price, double volume) {
+    public HotDrink(String name, double price, Double volume) {
         this.name = name;
         this.price = price;
         this.volume = volume;

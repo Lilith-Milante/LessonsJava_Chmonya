@@ -3,7 +3,6 @@ package OOP_HW1.Sem1.Task1;
 public class Chocolates extends ProductAbstr implements VendingInterface {
 
     private String color;
-    //private String name;
 
     public Chocolates(String name, double price, String currency, String color) {
         this.color = color;

@@ -32,7 +32,7 @@ public class HomeWork3Task2 {
 
         for (int i = 0; i < list1.size(); i++) {
             Integer f = (Integer) list1.get(i);
-            if (f % 2 == 1) {
+            if (f % 2 != 0) {
                 list2.add(f); // через метод remove не выходило удалять элементы из исходного списка
             }
         }

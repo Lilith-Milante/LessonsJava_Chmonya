@@ -13,7 +13,7 @@ public class TeacherController implements UserController{
     @Override
     public void create(String name, String birthday, String info) {
         Teacher controlStudent = new Teacher(name, birthday, info);
-        teacherControlSt.push(controlStudent);
+        teacherControlSt.add(controlStudent);
     }
 
     @Override

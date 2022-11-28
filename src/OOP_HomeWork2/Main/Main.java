@@ -6,6 +6,10 @@ package OOP_HomeWork2.Main;
         Все вышеуказанное создать согласно принципам ООП пройдённым на семинаре
         Контроллер вызывает сервис, сервис вызывает util, util записывает в файловую систему */
 
+import OOP_HomeWork2.controller.StudentController;
+import OOP_HomeWork2.controller.StudyGroupController;
+import OOP_HomeWork2.controller.TeacherController;
+
 import java.util.logging.Logger;
 
 public class Main {
@@ -13,22 +17,22 @@ public class Main {
 
         //Logger loggerStudy = Logger.getAnonymousLogger();
 
-        StudentController1 studentController = new StudentController();
+        StudentController studentController1 = new StudentController();
 
-        studentController.create("Egor", "22.11.2000","667");
-        studentController.create("Lilith", "29.12.2000","688");
-        studentController.create("Maria", "11.06.1996","698");
-        studentController.create("Sergey", "05.10.1998","677");
-        studentController.create("Anna", "06.09.1993","676");
+        studentController1.create("Egor", "22.11.2000","667");
+        studentController1.create("Lilith", "29.12.2000","688");
+        studentController1.create("Maria", "11.06.1996","698");
+        studentController1.create("Sergey", "05.10.1998","677");
+        studentController1.create("Anna", "06.09.1993","676");
 
-        TeacherController1 teacherController = new TeacherController();
+        TeacherController teacherController1 = new TeacherController();
 
-        teacherController.create("Sergey", "11.07.1990","Astronomy");
-        teacherController.create("Emil", "17.08.1985","Geography");
-        teacherController.create("Emily", "12.07.1990","History");
+        teacherController1.create("Sergey", "11.07.1990","Astronomy");
+        teacherController1.create("Emil", "17.08.1985","Geography");
+        teacherController1.create("Emily", "12.07.1990","History");
 
-        StudyGroupController studyGroupController = new StudyGroupController();
-        studyGroupController.create(teacherController.get(),studentController.getAll());
+        StudyGroupController studyGroupController1 = new StudyGroupController();
+        studyGroupController1.create(TeacherController.get(),StudentController.getAll());
 
     }
 }

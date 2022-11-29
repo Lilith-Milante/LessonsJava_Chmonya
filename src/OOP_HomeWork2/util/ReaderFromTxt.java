@@ -2,24 +2,17 @@ package OOP_HomeWork2.util;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
+import java.io.IOException;
 
 public class ReaderFromTxt {
-    public static ArrayList<String> read(String fileName){
+    public String read(String fileName) {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             StringBuilder sb = new StringBuilder();
-            ArrayList<String> arrayList = new ArrayList<>();
             while (bufferedReader.ready()) {
-                String line = bufferedReader.readLine(); // считывание строки
-                if (!line.equals(" ")) {
-                    arrayList.add(line);
-                }
-            }
-            return arrayList;
+                sb.append(bufferedReader.readLine()).append("\n");
+            } return sb.toString();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

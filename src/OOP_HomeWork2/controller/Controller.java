@@ -12,6 +12,6 @@ public class Controller {
 
         StudyGroupServiceImpl sgs = new StudyGroupServiceImpl();
 
-        logStudy.info(String.valueOf("Study Group: " + sgs.serviceToCreate("StudyGroupDone.txt")));
+        logStudy.info(String.valueOf("Study Group: " + sgs.serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroupDone.txt")));
     }
 }

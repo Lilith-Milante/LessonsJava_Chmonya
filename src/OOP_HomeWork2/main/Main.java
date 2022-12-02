@@ -21,3 +21,4 @@ public class Main {
     }
 }
 
+// итератор лучше добавлять в util

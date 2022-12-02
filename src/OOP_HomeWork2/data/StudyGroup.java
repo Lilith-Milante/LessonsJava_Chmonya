@@ -7,18 +7,39 @@ public class StudyGroup {
     private Teacher teacher;
     private List<Student> studentsList;
     private int groupNumber;
-    private int number; // для реализации groupNumber
+    private static int number; // для реализации groupNumber
 
     public StudyGroup(Teacher teacher, List<Student> studentsList) {
         this.teacher = teacher;
         this.studentsList = studentsList;
         this.groupNumber = number;
+        number++;
     }
 
     public StudyGroup() {
-        this.groupNumber = number;
+        this.groupNumber = ++number;
     }
 
+    public StudyGroup(Boolean count) {
+        if (count) {
+            this.groupNumber = ++number;
+        }
+    }
+    public int getGroupNumber() {
+        return groupNumber;
+    }
+
+    public void setGroupNumber(int groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+
+    public static int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
 
     public Teacher getTeacher() {
         return teacher;

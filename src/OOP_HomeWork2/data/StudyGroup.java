@@ -1,5 +1,8 @@
 package OOP_HomeWork2.data;
 
+import OOP_HomeWork2.service.StudyGroupServiceImpl;
+
+import java.util.Collection;
 import java.util.List;
 
 public class StudyGroup {
@@ -68,4 +71,5 @@ public class StudyGroup {
                 ", studentsList=" + studentsList +
                 '}';
     }
+
 }

@@ -1,5 +1,6 @@
 package OOP_HomeWork2.controller;
 
+import OOP_HomeWork2.data.Stream;
 import OOP_HomeWork2.data.StudyGroup;
 import OOP_HomeWork2.service.StudyGroupServiceImpl;
 
@@ -18,5 +19,15 @@ public class Controller {
         logStudy.info(String.valueOf("Study Group3: " + sgs.serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroup3Done.txt")));
         logStudy.info(String.valueOf("Study Group4: " + sgs.serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroup4Done.txt")));
         logStudy.info("Number of groups : " + StudyGroup.getNumber());
+
+        StudyGroup stg1 = serviceToCreate("StudyGroup1Done" + StudyGroupServiceImpl);
+
+        List<StudyGroup>
+
+        Stream streamStudy = new Stream();
+
+        logStudy.info(String.format("В первом потоке %d групп, во втором - %d групп", stream1.getStudyGroupList().size(),
+                stream2.getStudyGroupList().size()))
+
     }
 }

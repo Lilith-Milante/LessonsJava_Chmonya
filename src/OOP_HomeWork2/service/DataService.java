@@ -4,5 +4,5 @@ import OOP_HomeWork2.data.StudyGroup;
 
 public interface DataService {
 
-    public StudyGroup serviceToCreate(String file); // метод из указанного класса
+    public void serviceToCreate(String file); // метод из указанного класса
 }

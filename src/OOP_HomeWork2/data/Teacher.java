@@ -17,11 +17,10 @@ public class Teacher extends User{
         this.subject = subject;
     }
 
+    @Override
     public String toString() {
-        return "Teacher{" +
-                "Name=" + super.getName() +
-                "Birthday=" + super.getBirthday() +
-                "disciplesTaught='" + subject + '\'' +
+        return "Teacher{" + "name=" + super.getName() + "Birthday=" + super.getBirthday() +
+                "subject='" + subject + '\'' +
                 '}';
     }
 }

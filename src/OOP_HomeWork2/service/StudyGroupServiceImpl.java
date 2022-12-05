@@ -10,8 +10,9 @@ import java.util.List;
 
 public class StudyGroupServiceImpl implements DataService{ // реализуем метод из абстрактного класса (интерфейса)
 
+    private StudyGroup studyGroup;
     @Override
-    public StudyGroup serviceToCreate(String file) {
+    public void serviceToCreate(String file) {
         ReaderFromTxt reader = new ReaderFromTxt();
         String[] group = reader.read(file).split("\n");
 
@@ -26,6 +27,26 @@ public class StudyGroupServiceImpl implements DataService{ // реализуем
             }
         }
         sg.setStudentsList(students);
-        return sg;
+        this.studyGroup = sg;
     }
+
+    public StudyGroupServiceImpl(StudyGroup studyGroup) {
+        this.studyGroup = studyGroup;
+    }
+
+    public StudyGroup getStudyGroup() {
+        return studyGroup;
+    }
+
+    public void setStudyGroup(StudyGroup studyGroup) {
+        this.studyGroup = studyGroup;
+    }
+
+    public StudyGroupServiceImpl() {
+        this.studyGroup = new StudyGroup(false);
+    }
+
+    /*public void addStudentToList(Student student) {
+        this.studyGroup.getStudentsList().add(student);
+    }*/
 }

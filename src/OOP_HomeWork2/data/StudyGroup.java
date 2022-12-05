@@ -1,8 +1,5 @@
 package OOP_HomeWork2.data;
 
-import OOP_HomeWork2.service.StudyGroupServiceImpl;
-
-import java.util.Collection;
 import java.util.List;
 
 public class StudyGroup {
@@ -10,7 +7,7 @@ public class StudyGroup {
     private Teacher teacher;
     private List<Student> studentsList;
     private int groupNumber;
-    private static int number; // для реализации groupNumber
+    private static int number = 0; // для реализации groupNumber
 
     public StudyGroup(Teacher teacher, List<Student> studentsList) {
         this.teacher = teacher;
@@ -41,7 +38,7 @@ public class StudyGroup {
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        StudyGroup.number = number;
     }
 
     public Teacher getTeacher() {
@@ -60,16 +57,12 @@ public class StudyGroup {
         this.studentsList = studentsList;
     }
 
-    public void addStudents(Student student) { // добавление в лист
+    /*public void addStudents(Student student) { // добавление в лист
         studentsList.add(student);
-    }
+    }*/
 
     @Override
     public String toString() {
-        return "StudyGroup{" +
-                "teacher=" + teacher +
-                ", studentsList=" + studentsList +
-                '}';
+        return String.format("This group: ", this.groupNumber, this.teacher.toString(), this.studentsList);
     }
-
 }

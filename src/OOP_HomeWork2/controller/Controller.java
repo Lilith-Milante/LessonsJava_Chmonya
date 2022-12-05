@@ -12,7 +12,7 @@ import java.util.logging.Logger;
 
 public class Controller {
 
-    private Logger logStudy = Logger.getAnonymousLogger();
+    static Logger logStudy = Logger.getAnonymousLogger();
 
     public void controller() {
 
@@ -50,13 +50,13 @@ public class Controller {
         StreamService streamService1 = new StreamService();
         streamService1.sortStreamList(streamList);
 
-        logStudy.info("Sortred list of streams: " + streamList.get(0) + streamList.get(1));
+        logStudy.info("Sort list of streams: " + streamList.get(0) + streamList.get(1));
     }
 
-        private StudyGroup serviceToCreate(String file, StudyGroupServiceImpl studyGroupService) { // для срабатывания метода по созданию групп
-            studyGroupService.serviceToCreate(file);
-            StudyGroup group = studyGroupService.getStudyGroup();
-            logStudy.info("Created group: " + group.toString());
-            return group;
-        }
+    public StudyGroup serviceToCreate(String file, StudyGroupServiceImpl studyGroupService) { // для срабатывания метода по созданию групп
+        studyGroupService.serviceToCreate(file);
+        StudyGroup group = studyGroupService.getStudyGroup();
+        logStudy.info("Created group: " + group.toString());
+        return group;
     }
+}

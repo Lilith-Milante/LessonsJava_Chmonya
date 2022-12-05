@@ -17,17 +17,17 @@ public class StudyGroupServiceImpl implements DataService{ // реализуем
         String[] group = reader.read(file).split("\n");
 
         List<Student> students = new ArrayList<>();
-        StudyGroup sg = new StudyGroup();
+        StudyGroup studyGroup = new StudyGroup();
         for(String item : group) {
             String[] aux = item.split(" ");
             if(aux[0].equals("Teacher")) {
-                sg.setTeacher(new Teacher(aux[1], aux[2], aux[3]));
+                studyGroup.setTeacher(new Teacher(aux[1], aux[2], aux[3]));
             } else if(aux[0].equals("Student")) {
                 students.add(new Student(aux[1], aux[2], Integer.parseInt(aux[3])));
             }
         }
-        sg.setStudentsList(students);
-        this.studyGroup = sg;
+        studyGroup.setStudentsList(students);
+        this.studyGroup = studyGroup;
     }
 
     public StudyGroupServiceImpl(StudyGroup studyGroup) {

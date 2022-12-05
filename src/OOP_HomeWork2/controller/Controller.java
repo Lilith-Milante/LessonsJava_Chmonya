@@ -25,9 +25,9 @@ public class Controller {
         logStudy.info("Number of groups : " + StudyGroup.getNumber());
 
         StudyGroup stg1 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroupDone.txt", sgs);
-        StudyGroup stg2 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroupDone2.txt", sgs);
-        StudyGroup stg3 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroupDone3.txt", sgs);
-        StudyGroup stg4 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroupDone4.txt", sgs);
+        StudyGroup stg2 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroup2Done.txt", sgs);
+        StudyGroup stg3 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroup3Done.txt", sgs);
+        StudyGroup stg4 = serviceToCreate("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_HomeWork2\\controller\\StudyGroup4Done.txt", sgs);
 
         logStudy.info("Number of groups : " + StudyGroup.getNumber());
 

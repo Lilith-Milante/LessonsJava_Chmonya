@@ -12,7 +12,7 @@ public class StudyGroupServiceImpl implements DataService{ // реализуем
 
     private StudyGroup studyGroup;
     @Override
-    public void serviceToCreate(String file) {
+    public Object serviceToCreate(String file) {
         ReaderFromTxt reader = new ReaderFromTxt();
         String[] group = reader.read(file).split("\n");
 
@@ -28,6 +28,7 @@ public class StudyGroupServiceImpl implements DataService{ // реализуем
         }
         studyGroup.setStudentsList(students);
         this.studyGroup = studyGroup;
+        return students;
     }
 
     public StudyGroupServiceImpl(StudyGroup studyGroup) {
@@ -46,7 +47,7 @@ public class StudyGroupServiceImpl implements DataService{ // реализуем
         this.studyGroup = new StudyGroup(false);
     }
 
-    /*public void addStudentToList(Student student) {
+    public void addStudentToList(Student student) {
         this.studyGroup.getStudentsList().add(student);
-    }*/
+    }
 }

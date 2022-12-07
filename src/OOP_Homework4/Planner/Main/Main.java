@@ -1,4 +1,4 @@
-package OOP_Homework.Planner.Main;
+package OOP_Homework4.Planner.Main;
 
 public class Main {
     public static void main(String[] args) {

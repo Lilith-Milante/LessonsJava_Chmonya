@@ -1,10 +1,11 @@
 package OOP_Homework4.Planner.Main;
 
+import OOP_Homework4.Planner.controller.Controller;
+
 public class Main {
     public static void main(String[] args) {
 
-        //Controller controller = new Controller();
-        //controller.controller();
+        Controller.controller();
     }
 }
 

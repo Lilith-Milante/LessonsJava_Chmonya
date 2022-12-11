@@ -1,6 +1,6 @@
-package Ex002Phonebook.UI;
+package OOP_Lec5.Ex002Phonebook.UI;
 
-public class NewConsoleView extends ConsoleView {
+public class NewConsoleView extends Ex002Phonebook.UI.ConsoleView {
     
     public NewConsoleView() {
         super();

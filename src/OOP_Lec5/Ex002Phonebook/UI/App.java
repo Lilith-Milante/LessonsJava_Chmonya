@@ -1,4 +1,4 @@
-package Ex002Phonebook.UI;
+package OOP_Lec5.Ex002Phonebook.UI;
 
 import java.util.Scanner;
 

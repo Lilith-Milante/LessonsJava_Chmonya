@@ -1,3 +1,3 @@
-Components{id=2, createTime=null, createDate=null, deadLine=null, nameAutor='Tomas Wayne', priority=null}
-Components{id=3, createTime=null, createDate=null, deadLine=null, nameAutor='Marta Kane', priority=null}
-Components{id=4, createTime=null, createDate=null, deadLine=null, nameAutor='Alfred Pennyworth', priority=null}
+Components{id=2, createTime=00:49:22.936520300, createDate=2022-12-12, deadLine=2022-12-15, nameAutor='Tomas Wayne', priority=Immediate}
+Components{id=3, createTime=00:49:22.938515200, createDate=2022-12-12, deadLine=2022-12-19, nameAutor='Marta Kane', priority=Middle}
+Components{id=4, createTime=00:49:22.938515200, createDate=2022-12-12, deadLine=2022-12-26, nameAutor='Alfred Pennyworth', priority=Low}

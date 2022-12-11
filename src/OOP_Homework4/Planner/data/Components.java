@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Components {
-    private int priorityInt;
+    //private int priorityInt;
     private int id;
     private LocalTime createTime;
     private LocalDate createDate;
@@ -42,11 +42,7 @@ public class Components {
     }
 
     public Components(int id, int priorityInt, String nameAutor) {
-        this.id = id;
-        this.priorityInt = priorityInt;
-        this.nameAutor = nameAutor;
-        LocalDate.now();
-        LocalTime.now();
+        this(id, priorityInt, nameAutor, LocalTime.now(), LocalDate.now());
     }
 
     public int getId() {

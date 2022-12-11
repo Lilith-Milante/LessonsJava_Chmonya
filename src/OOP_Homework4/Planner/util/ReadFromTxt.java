@@ -32,7 +32,7 @@ public class ReadFromTxt {
                 String nameAutor = i.substring(i.indexOf("=")+2, i.indexOf(",")-1);
                 i = i.substring(i.indexOf(",")+1);
                 String priorityString = i.substring(i.indexOf("=")+1, i.indexOf("}"));
-                int priorityInt = 1;
+                int priorityInt = 0;
 
                 switch (priorityString){
                     case "Low":

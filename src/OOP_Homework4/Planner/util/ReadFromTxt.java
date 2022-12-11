@@ -29,7 +29,7 @@ public class ReadFromTxt {
                 i = i.substring(i.indexOf(",")+1);
                 LocalDate deadLine = LocalDate.parse(i.substring(i.indexOf("=")+1, i.indexOf(",")));
                 i = i.substring(i.indexOf(",")+1);
-                String autorName = i.substring(i.indexOf("=")+2, i.indexOf(",")-1);
+                String nameAutor = i.substring(i.indexOf("=")+2, i.indexOf(",")-1);
                 i = i.substring(i.indexOf(",")+1);
                 String priorityString = i.substring(i.indexOf("=")+1, i.indexOf("}"));
                 int priorityInt = 1;
@@ -45,7 +45,7 @@ public class ReadFromTxt {
                         priorityInt = 3;
                         break;
                 }
-                Components test = new Components(id, priorityInt, autorName, createTime, createDate);
+                Components test = new Components(id, priorityInt, nameAutor, createTime, createDate);
                 readFile.addTask(test);
             }
 

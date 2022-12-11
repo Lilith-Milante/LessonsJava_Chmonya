@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Components {
+    private int priorityInt;
     private int id;
     private LocalTime createTime;
     private LocalDate createDate;
@@ -11,14 +12,12 @@ public class Components {
     private String nameAutor;
     private Priority priority;
 
-    public Components(int id, int priorityInt, String nameAutor, LocalTime now, LocalDate now1) {
-    }
 
     enum Priority{ // модификатор перечисления
         Low, Middle, Immediate
     }
 
-    public Components(int id, int priorityInt, LocalTime createTime, LocalDate createDate) {
+    public Components(int id, int priorityInt, String nameAutor, LocalTime createTime, LocalDate createDate) {
        this.id = id;
        this.createDate = createDate;
        this.createTime = createTime;
@@ -40,11 +39,14 @@ public class Components {
                this.deadLine = this.createDate.plusDays(3);
                break;
        }
-
     }
 
     public Components(int id, int priorityInt, String nameAutor) {
-        this(id, priorityInt, nameAutor, LocalTime.now(), LocalDate.now());
+        this.id = id;
+        this.priorityInt = priorityInt;
+        this.nameAutor = nameAutor;
+        LocalDate.now();
+        LocalTime.now();
     }
 
     public int getId() {

@@ -1,3 +1,3 @@
-Components{id=0, createTime=null, createDate=null, deadLine=null, nameAutor='null', priority=null}
-Components{id=0, createTime=null, createDate=null, deadLine=null, nameAutor='null', priority=null}
-Components{id=0, createTime=null, createDate=null, deadLine=null, nameAutor='null', priority=null}
+Components{id=2, createTime=null, createDate=null, deadLine=null, nameAutor='Tomas Wayne', priority=null}
+Components{id=3, createTime=null, createDate=null, deadLine=null, nameAutor='Marta Kane', priority=null}
+Components{id=4, createTime=null, createDate=null, deadLine=null, nameAutor='Alfred Pennyworth', priority=null}

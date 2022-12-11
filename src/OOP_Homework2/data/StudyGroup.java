@@ -4,7 +4,7 @@ import java.util.List;
 
 public class StudyGroup {
 
-    private Teacher teacher;
+    private OOP_Homework2.data.Teacher teacher;
     private List<Student> studentsList;
     private int groupNumber;
     private static int number = 0; // для реализации groupNumber

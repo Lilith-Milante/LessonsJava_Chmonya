@@ -1,4 +1,4 @@
-package OOP_Homework4.Planner.Main;
+package OOP_Homework4.Planner.main;
 
 import OOP_Homework4.Planner.controller.Controller;
 

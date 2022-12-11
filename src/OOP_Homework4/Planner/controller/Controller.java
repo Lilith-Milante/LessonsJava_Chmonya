@@ -9,7 +9,7 @@ import java.util.logging.Logger;
 
 public class Controller {
 
-    public static void controller() {
+    public void controller() {
         Logger logPlanner = Logger.getAnonymousLogger();
         Components data1 = new Components(2, 3, "Tomas Wayne");
         Components data2 = new Components(3, 2, "Marta Kane");
@@ -21,9 +21,7 @@ public class Controller {
         plannerService1.addTask(data3);
 
         logPlanner.info("\n" + plannerService1.toString());
-        new WriteToTxt().write(plannerService1, "Planner.txt");
-        logPlanner.info("\n" + new ReadFromTxt().read("Planner.txt").toString());
-
+        new WriteToTxt().write(plannerService1, "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework4\\Planner\\Planner.txt");
+        logPlanner.info("\n" + new ReadFromTxt().read("D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework4\\Planner\\Planner.txt").toString());
     }
-
 }

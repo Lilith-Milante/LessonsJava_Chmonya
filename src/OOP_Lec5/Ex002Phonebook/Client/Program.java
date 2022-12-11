@@ -1,4 +1,4 @@
-package Ex002Phonebook.Client;
+/*package Ex002Phonebook.Client;
 
 import Ex002Phonebook.UI.App;
 
@@ -9,4 +9,4 @@ public class Program {
         App.ButtonClick();
      
     }
-}
+}*/

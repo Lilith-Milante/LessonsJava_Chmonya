@@ -9,13 +9,16 @@ public class Components {
     private LocalDate createDate;
     private LocalDate deadLine;
     private String nameAutor;
-    private State priority;
+    private Priority priority;
 
-    enum State{
+    public Components(int id, int priorityInt, String nameAutor, LocalTime now, LocalDate now1) {
+    }
+
+    enum Priority{ // модификатор перечисления
         Low, Middle, Immediate
     }
 
-    public Components(int id, int priorityInt, LocalTime createTime, LocalDate createDate,  LocalDate deadLine) {
+    public Components(int id, int priorityInt, LocalTime createTime, LocalDate createDate) {
        this.id = id;
        this.createDate = createDate;
        this.createTime = createTime;
@@ -23,17 +26,17 @@ public class Components {
 
        switch (priorityInt) {
            case 1:
-               this.priority = State.Low;
+               this.priority = Priority.Low;
                this.deadLine = this.createDate.plusDays(14);
                break;
 
            case 2:
-               this.priority = State.Middle;
+               this.priority = Priority.Middle;
                this.deadLine = this.createDate.plusDays(7);
                break;
 
            case 3:
-               this.priority = State.Immediate;
+               this.priority = Priority.Immediate;
                this.deadLine = this.createDate.plusDays(3);
                break;
        }
@@ -41,7 +44,7 @@ public class Components {
     }
 
     public Components(int id, int priorityInt, String nameAutor) {
-        this(id, priorityInt, nameAutor, LocalDate.now(), LocalTime.now());
+        this(id, priorityInt, nameAutor, LocalTime.now(), LocalDate.now());
     }
 
     public int getId() {
@@ -64,7 +67,7 @@ public class Components {
         return nameAutor;
     }
 
-    public State getPriority() {
+    public Priority getPriority() {
         return priority;
     }
 

@@ -1,4 +1,4 @@
-package OOP_Lec5.Ex002Phonebook.Core.MVP;
+/*package OOP_Lec5.Ex002Phonebook.Core.MVP;
 
 import OOP_Lec5.Ex002Phonebook.Core.Models.Contact;
 public class Presenter {
@@ -82,3 +82,4 @@ public class Presenter {
         }
     }
 }
+*/

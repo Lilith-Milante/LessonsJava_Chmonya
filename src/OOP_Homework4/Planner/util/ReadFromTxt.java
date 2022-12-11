@@ -20,18 +20,20 @@ public class ReadFromTxt {
             while (sc.hasNextLine()) {
                 lines.add(sc.nextLine());
             } for (String i : lines) {
-                int id = Integer.parseInt(i.substring(i.indexOf("=")+ 1, i.indexOf(",")));
+
+                int id = Integer.parseInt(i.substring(i.indexOf("=")+1, i.indexOf(",")));
                 i = i.substring(i.indexOf(",")+1);
                 LocalDate createDate = LocalDate.parse(i.substring(i.indexOf("=")+1, i.indexOf(",")));
                 i = i.substring(i.indexOf(",")+1);
                 LocalTime createTime = LocalTime.parse(i.substring(i.indexOf("=")+1, i.indexOf(",")));
                 i = i.substring(i.indexOf(",")+1);
-                LocalDate deadline = LocalDate.parse(i.substring(i.indexOf("=")+1, i.indexOf(",")));
+                LocalDate deadLine = LocalDate.parse(i.substring(i.indexOf("=")+1, i.indexOf(",")));
                 i = i.substring(i.indexOf(",")+1);
                 String autorName = i.substring(i.indexOf("=")+2, i.indexOf(",")-1);
                 i = i.substring(i.indexOf(",")+1);
                 String priorityString = i.substring(i.indexOf("=")+1, i.indexOf("}"));
                 int priorityInt = 1;
+
                 switch (priorityString){
                     case "Low":
                         priorityInt = 1;
@@ -43,7 +45,7 @@ public class ReadFromTxt {
                         priorityInt = 3;
                         break;
                 }
-                Components test = new Components(id, priorityInt, autorName, createDate, createTime);
+                Components test = new Components(id, priorityInt, autorName, createTime, createDate);
                 readFile.addTask(test);
             }
 

@@ -26,18 +26,18 @@ public class Controller {
         User user3 = new User("Cous", "Ty", "Tinkoff");
         User user4 = new User("Alex", "Tee","Cinecast");
 
-        ArrayList<Phone> phones1 = new ArrayList<Phone>(); // тел книга для первого контакта
+        ArrayList<Phone> phones1 = new ArrayList<>(); // тел книга для первого контакта
         phones1.add(new Phone("89 26 132 88 95"));
         phones1.add(new Phone("89 34 879 56 55"));
         phones1.add(new Phone("89 85 312 49 50"));
 
-        ArrayList<Phone> phones2 = new ArrayList<Phone>();
+        ArrayList<Phone> phones2 = new ArrayList<>();
         phones2.add(new Phone("89 34 879 56 55"));
 
-        ArrayList<Phone> phones3 = new ArrayList<Phone>();
+        ArrayList<Phone> phones3 = new ArrayList<>();
         phones3.add(new Phone("89 26 628 39 95"));
 
-        ArrayList<Phone> phones4 = new ArrayList<Phone>();
+        ArrayList<Phone> phones4 = new ArrayList<>();
         phones4.add(new Phone("89 26 490 39 65"));
         phones2.add(new Phone("89 26 132 55 49"));
 
@@ -60,7 +60,6 @@ public class Controller {
         for (Contact i: bookFirst.getContacts()){
             sb.append("\n" + i.toString());
         }
-
         logPhoneBook.info(sb.toString()); // запись в логгер
 
         //String pathFile2 = "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework5\\PhoneBook.csv";
@@ -78,6 +77,6 @@ public class Controller {
         for (Contact i: bookSecondJs.getContacts()){
             sb.append("\n" + i.toString());
         }
-        logPhoneBook.info(sb.toString());
+        logPhoneBook.info(sb.toString()); // запись в файл
     }
 }

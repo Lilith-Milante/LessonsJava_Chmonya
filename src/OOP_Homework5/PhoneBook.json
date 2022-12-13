@@ -1,0 +1,4 @@
+{"firstName":"Anna","lastName":"Ivanova","Phones":[Phone{phoneNumber='89 26 132 88 95'},Phone{phoneNumber='89 34 879 56 55'},Phone{phoneNumber='89 85 312 49 50'}],"company":"ITeco"}
+{"firstName":"Lilith","lastName":"Milante","Phones":[Phone{phoneNumber='89 34 879 56 55'},Phone{phoneNumber='89 26 132 55 49'}],"company":"Cinecast"}
+{"firstName":"Cous","lastName":"Ty","Phones":[Phone{phoneNumber='89 26 628 39 95'}],"company":"Tinkoff"}
+{"firstName":"Alex","lastName":"Tee","Phones":[Phone{phoneNumber='89 26 490 39 65'}],"company":"Cinecast"}

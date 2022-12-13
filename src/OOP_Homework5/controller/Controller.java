@@ -8,10 +8,10 @@ import OOP_Homework5.data.User;
 import OOP_Homework5.service.ContactServiceImpl;
 import OOP_Homework5.service.PhonebookService;
 import OOP_Homework5.util.ReadFromConcole;
+import OOP_Homework5.util.ReadFromJSON;
+import OOP_Homework5.util.WriteToJSON;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.logging.Logger;
 
 public class Controller {
@@ -56,16 +56,28 @@ public class Controller {
 
         StringBuilder sb = new StringBuilder();
 
-
-        String pathFile = "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework5\\PhoneBook.json";
-
-        Phonebook pb1 = new PhonebookService().createPhonebook("pb1", book);
-        for (Contact i: pb1.getContacts()){
+        Phonebook bookFirst = new PhonebookService().createPhonebook("BookFirst", book);
+        for (Contact i: bookFirst.getContacts()){
             sb.append("\n" + i.toString());
         }
 
-        logPhoneBook.info(sb.toString());
+        logPhoneBook.info(sb.toString()); // запись в логгер
 
-        String pathFile2 = "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework5\\PhoneBook.csv";
+        //String pathFile2 = "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework5\\PhoneBook.csv";
+
+        String pathFile = "D:\\Курс Разработчик\\II Четверть\\02 Java\\Lesson2\\Lesson2\\src\\OOP_Homework5\\PhoneBook.json";
+
+        WriteToJSON jw = new WriteToJSON();
+        jw.writeJson(jw.createJsonArray(bookFirst), pathFile);
+
+        ReadFromJSON jsonReader = new ReadFromJSON();
+        Phonebook bookSecondJs = jsonReader.readJson(pathFile);
+
+        sb.setLength(0);
+
+        for (Contact i: bookSecondJs.getContacts()){
+            sb.append("\n" + i.toString());
+        }
+        logPhoneBook.info(sb.toString());
     }
 }

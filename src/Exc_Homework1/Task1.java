@@ -75,7 +75,7 @@ public class Task1 {
         } catch (ArithmeticException e) {
             return "Try another value for your formula " + (e.getClass().getSimpleName()) + "\n" + arr[5];
         } catch (ArrayIndexOutOfBoundsException e) {
-                return "Write an another index or length of massive" + (e.getClass().getSimpleName());
+            return "Write an another index or length of massive" + (e.getClass().getSimpleName());
         } catch (NumberFormatException e) {
             return "Choose int value" + (e.getClass().getSimpleName()) + (e.getClass().getSimpleName()) + "\n" + messageForMassive;
         } return message;

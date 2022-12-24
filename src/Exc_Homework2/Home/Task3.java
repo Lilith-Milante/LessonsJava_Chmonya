@@ -2,7 +2,8 @@ package Exc_Homework2.Home;
 
 import java.io.FileNotFoundException;
 
-/*
+/* Исправить код там, где нужно :
+
 public static void main(String[] args) throws Exception {
    try {
        int a = 90;
